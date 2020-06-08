@@ -71,7 +71,7 @@ public class PlayerMagic : MonoBehaviour
 
             Rigidbody rb = magicBall.GetComponent<Rigidbody>();
 
-            rb.AddForce(magicBall.transform.forward * 10, ForceMode.Impulse);
+            rb.AddForce(magicBall.transform.forward * 15, ForceMode.Impulse);
 
             Destroy(magicBall, 1.5f);
         }

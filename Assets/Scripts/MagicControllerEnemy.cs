@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicControllerEnemy: MonoBehaviour
+public class MagicControllerEnemy : MonoBehaviour
 {
     public int damagePerAttack = 10;
     public float range = 1f;
@@ -21,11 +21,9 @@ public class MagicControllerEnemy: MonoBehaviour
                 Attack();
             }
         }
-
-        if (!other.gameObject.CompareTag("Enemy"))
-        {
+        if (!other.gameObject.CompareTag("Enemy")){
             Destroy(gameObject, 0f);
-        }
+        }    
     }
 
     void Attack()

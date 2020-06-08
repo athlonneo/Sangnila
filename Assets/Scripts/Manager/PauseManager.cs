@@ -9,6 +9,7 @@ public class PauseManager : MonoBehaviour
 {
     public AudioMixerSnapshot pause;
     public AudioMixerSnapshot play;
+    public ThirdPersonCamera thirdPersonCamera;
 
     Canvas canvas;
     GameObject player;
@@ -52,6 +53,8 @@ public class PauseManager : MonoBehaviour
                 playerMagic.enabled = true;
             }
         }
+
+        thirdPersonCamera.Pause();
     }
 
     public void Quit()

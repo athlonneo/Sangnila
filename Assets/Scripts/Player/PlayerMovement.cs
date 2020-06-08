@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
             Move(h, v);
-            Turning();
+            //Turning();
             Animating(h, v);
         }
     }
@@ -37,7 +37,8 @@ public class PlayerMovement : MonoBehaviour
     void Move(float h, float v)
     {
         movement.Set(h, 0f, v);
-        movement = movement.normalized * speed * Time.deltaTime;
+        //movement = movement.normalized * speed * Time.deltaTime;
+        movement = (transform.forward * v * speed * Time.deltaTime) + (transform.right * h * speed * Time.deltaTime);
         playerRigidbody.MovePosition(transform.position + movement);
     }
 
