@@ -80,6 +80,7 @@ public class EnemyPatrol : MonoBehaviour
         timer = 0f;
         //Quaternion newRotation = Quaternion.LookRotation(player.transform.position);
         var magicBall = (GameObject)Instantiate(magicPrefab, magicSpawn.transform) as GameObject;
+        magicBall.transform.parent = null;
         Rigidbody rb = magicBall.GetComponent<Rigidbody>();
         rb.AddForce(magicBall.transform.forward * 10, ForceMode.Impulse);
         Destroy(magicBall, 1.5f);
