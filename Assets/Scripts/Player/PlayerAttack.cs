@@ -64,7 +64,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Animate();
-            if(timer >= timeBetweenAttacks && enemyInRange && enemyHealth != null && enemyHealth.currentHealth > 0 && !GameOverManager.isGameOver)
+            if (timer >= timeBetweenAttacks && enemyInRange && enemyHealth != null && enemyHealth.currentHealth > 0 && !GameOverManager.isGameOver)
             {
                 Attack();
             }
